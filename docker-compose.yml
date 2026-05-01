@@ -1,0 +1,23 @@
+services:
+  # Your C# API
+  api:
+    build:
+      context: .
+      dockerfile: CloudTaskManager.Server/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+
+  # The Local Cloud
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"
+    environment:
+      - LOCALSTACK_AUTH_TOKEN=ls-waSiFevu-bATu-YEdE-4000-3988KiXe07c8 # Get from app.localstack.cloud
+      - SERVICES=s3,dynamodb
+    volumes:
+      - "./volume:/var/lib/localstack"

@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Project Path="CloudTaskManager.AppHost/CloudTaskManager.AppHost.csproj" />
+  <Project Path="CloudTaskManager.Server/CloudTaskManager.Server.csproj" />
+  <Project Path="frontend/frontend.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
