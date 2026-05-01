@@ -17,7 +17,7 @@ services:
     ports:
       - "4566:4566"
     environment:
-      - LOCALSTACK_AUTH_TOKEN=ls-waSiFevu-bATu-YEdE-4000-3988KiXe07c8 # Get from app.localstack.cloud
+      - LOCALSTACK_AUTH_TOKEN=token
       - SERVICES=s3,dynamodb
     volumes:
       - "./volume:/var/lib/localstack"
